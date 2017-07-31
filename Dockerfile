@@ -6,7 +6,7 @@ RUN apt-get update && \
 	wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | apt-key add - && \
 	apt-get update && \ 
 	apt-get install -y rabbitmq-server && \
-	/usr/sbin/rabbitmq-plugins enable --offline rabbitmq_management rabbitmq_management_agent rabbitmq_management_visualiser rabbitmq_federation rabbitmq_federation_management 
+	/usr/sbin/rabbitmq-plugins enable --offline rabbitmq_management rabbitmq_management_agent rabbitmq_management_visualiser rabbitmq_federation rabbitmq_federation_management rabbitmq_shovel rabbitmq_shovel_management
 
 ENV DOCKERIZE_VERSION v0.2.0
 
